@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO.Ports;
+
 public class Arduino : MonoBehaviour
 {
     SerialPort ard;
@@ -17,8 +18,8 @@ public class Arduino : MonoBehaviour
         {
             try
             {
-                string pot = ard.ReadLine();
-                print(pot);
+                string electrode = ard.ReadLine();
+                Debug.Log(electrode);
             }
             catch (System.Exception)
             {
